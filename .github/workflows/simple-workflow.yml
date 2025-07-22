@@ -1,1 +1,18 @@
+name: CI
 
+#when the action will run
+on:
+  push:
+    branches: [master]
+  pull_request:
+     branches: [master]
+
+#Jobs to be run:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one line comment
+      run: echo Hi johnson 
+     
